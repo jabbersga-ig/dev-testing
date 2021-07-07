@@ -1,0 +1,56 @@
+<div class="layout column-layout column">
+  <div class="row-layout_1 row">
+    <div class="row-layout_2 row">
+      <img src="https://i.ibb.co/syrwz7h/travel-app.png" class="image" />
+    </div>
+    <div class="row-layout row">
+      <button igxButton="icon" igxButtonColor="var(--igx-surface-500)" type="icon" [disabled]="false" class="icon-button">
+        <igx-icon>notifications</igx-icon>
+      </button>
+      <igx-avatar [roundShape]="true" src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" size="small" class="avatar"></igx-avatar>
+    </div>
+  </div>
+  <div class="layout row">
+    <div class="row-layout_3 row">
+      <igx-nav-drawer width="100%" [pin]="true" [pinThreshold]="1" position="left" [isOpen]="true" class="navigation-drawer">
+        <ng-template igxDrawer>
+          <span [isHeader]="false" igxDrawerItem>
+            <igx-icon font="material" [active]="true" color="var(--igx-grays-600)">view_quilt</igx-icon>
+            <span class="navigation-drawer_1">Dashboard</span>
+          </span>
+          <span [isHeader]="false" igxDrawerItem>
+            <igx-icon font="material" [active]="true" color="var(--igx-grays-600)">image_search</igx-icon>
+            <span class="navigation-drawer_1">Discover</span>
+          </span>
+          <span [isHeader]="false" igxDrawerItem>
+            <igx-icon font="material" [active]="true" color="var(--igx-grays-600)">flight_takeoff</igx-icon>
+            <span class="navigation-drawer_1">My travels</span>
+          </span>
+          <span [isHeader]="false" igxDrawerItem>
+            <igx-icon font="material" [active]="true" color="var(--igx-grays-600)">playlist_add_check</igx-icon>
+            <span class="navigation-drawer_1">Travel lists</span>
+          </span>
+          <span [isHeader]="false" igxDrawerItem>
+            <igx-icon font="material" [active]="true" color="var(--igx-grays-600)">chrome_reader_mode</igx-icon>
+            <span class="navigation-drawer_1">Articles</span>
+          </span>
+          <span [isHeader]="false" igxDrawerItem>
+            <igx-icon font="material" [active]="true">book</igx-icon>
+            <span class="navigation-drawer_1">Saved</span>
+          </span>
+          <span [isHeader]="false" igxDrawerItem>
+            <igx-icon font="material" [active]="true">question_answer</igx-icon>
+            <span class="navigation-drawer_1">FAQ</span>
+          </span>
+          <span [isHeader]="false" igxDrawerItem>
+            <igx-icon font="material" [active]="true">settings</igx-icon>
+            <span class="navigation-drawer_1">Settings</span>
+          </span>
+        </ng-template>
+      </igx-nav-drawer>
+    </div>
+    <div class="views-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
