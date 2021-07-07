@@ -1,3 +1,111 @@
-<div class="outer-wrapper">
-  <router-outlet></router-outlet>
+<div class="header row">
+  <div class="row-layout_1 row">
+    <img src="https://static.infragistics.com/marketing/slingshot/slingshot-icon.svg" class="image" />
+    <button igxButton="flat" igxButtonColor="var(--igx-grays-900)" [disabled]="false" class="user-input">
+      <span>Home</span>
+      <igx-icon>keyboard_arrow_down</igx-icon>
+    </button>
+    <igx-drop-down height="max-content" class="project-dropdown">
+      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item">
+        Home
+      </igx-drop-down-item>
+      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item">
+        Company Inc.
+      </igx-drop-down-item>
+      <igx-drop-down-item [isHeader]="true" [disabled]="false" class="dropdown-item">
+        INDIGO.DESIGN
+      </igx-drop-down-item>
+      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item">
+        Growth hacking
+      </igx-drop-down-item>
+      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item">
+        Public preview
+      </igx-drop-down-item>
+      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item">
+        UX Feedback
+      </igx-drop-down-item>
+      <igx-drop-down-item [isHeader]="true" [disabled]="false" class="dropdown-item">
+        Reveal
+      </igx-drop-down-item>
+      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item">
+        Onboarding
+      </igx-drop-down-item>
+      <igx-drop-down-item [disabled]="false" [isHeader]="false" class="dropdown-item">
+        Analytics
+      </igx-drop-down-item>
+    </igx-drop-down>
+  </div>
+  <div class="row-layout_2 row">
+    <button igxButton="raised" igxButtonColor="var(--igx-surface-500)" igxButtonBackground="var(--igx-grays-900)" [disabled]="false" class="button">
+      <igx-icon>add</igx-icon>
+      <span>Task</span>
+    </button>
+    <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+      <igx-icon>add_alert</igx-icon>
+    </button>
+    <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+      <igx-icon>message</igx-icon>
+    </button>
+    <igx-avatar [roundShape]="true" src="https://d3cg6cexo8t5ug.cloudfront.net/avatars/avatar6.png" size="small" class="avatar"></igx-avatar>
+  </div>
 </div>
+<div class="row-layout row">
+  <igx-nav-drawer width="320px" [pin]="true" [pinThreshold]="1024" position="left" [isOpen]="false" class="navigation-drawer">
+    <ng-template igxDrawer>
+      <span [isHeader]="false" igxDrawerItem>
+        <igx-icon font="material" [active]="true">account_circle</igx-icon>
+        <span class="nav-item-title">Title goes here</span>
+      </span>
+    </ng-template>
+    <ng-template igxDrawerMini>
+      <span [isHeader]="false" igxDrawerItem routerLink="/my-tasks">
+        <igx-icon font="material" [active]="true">assignment_turned_in</igx-icon>
+      </span>
+      <span [isHeader]="false" igxDrawerItem routerLink="/dashboards">
+        <igx-icon font="material" [active]="true">dashboard</igx-icon>
+      </span>
+      <span [isHeader]="false" igxDrawerItem>
+        <igx-icon font="material" [active]="true">vertical_split</igx-icon>
+      </span>
+      <span [isHeader]="false" igxDrawerItem>
+        <igx-icon font="material" [active]="true">bar_chart</igx-icon>
+      </span>
+      <span [isHeader]="false" igxDrawerItem>
+        <igx-icon font="material" [active]="true">folder</igx-icon>
+      </span>
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="views-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<igx-dialog [closeOnOutsideSelect]="true" [closeOnEscape]="true" class="dialog-window">
+  <igx-dialog-title>Sign in</igx-dialog-title>
+  <div igxDialogActions>
+    <button igxButton="flat" [disabled]="false" class="user-input">
+      <span>Cancel</span>
+    </button>
+    <button igxButton="flat" [disabled]="false" class="user-input">
+      <span>Sign in</span>
+    </button>
+  </div>
+  <div>
+    <div class="column-layout column">
+      <igx-input-group placeholder type="border" class="input-group">
+        <igx-prefix>
+          <igx-icon font="material" [active]="true" class="icon">person</igx-icon>
+        </igx-prefix>
+        <label igxLabel for="inputField">Username</label>
+        <input type="text" name="inputField" [required]="false" [disabled]="false" igxInput />
+      </igx-input-group>
+      <igx-input-group placeholder type="border" class="user-input">
+        <igx-prefix>
+          <igx-icon font="material" [active]="true" class="icon">lock</igx-icon>
+        </igx-prefix>
+        <label igxLabel for="inputField">Password</label>
+        <input type="password" name="inputField" [required]="false" [disabled]="false" igxInput />
+      </igx-input-group>
+      <a href target="_blank" class="link">This is a link</a>
+    </div>
+  </div>
+</igx-dialog>
