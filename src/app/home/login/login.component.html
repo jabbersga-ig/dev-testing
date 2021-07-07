@@ -1,0 +1,35 @@
+<div class="row-layout row">
+  <div class="column-layout column">
+    <div class="layout layout_1 layout_2 column">
+      <div class="layout column-layout_3 column">
+        <h3 class="title">Login</h3>
+        <p class="igx-typography__body-2 text">Please, login so you can access all applications features.</p>
+      </div>
+      <igx-input-group placeholder="myname@website.com" type="border" class="input-group">
+        <label igxLabel for="inputField">Email</label>
+        <input type="text" name="inputField" [required]="false" [disabled]="false" placeholder="myname@website.com" igxInput />
+      </igx-input-group>
+      <igx-input-group placeholder="Min 8 characters" type="border" class="input-group">
+        <label igxLabel for="inputField">Password</label>
+        <input type="text" name="inputField" [required]="false" [disabled]="false" placeholder="Min 8 characters" igxInput />
+      </igx-input-group>
+      <div class="layout layout_1 row">
+        <div class="layout_1 layout_2 row-layout_2 row">
+          <igx-checkbox [checked]="true" labelPosition="after" [disabled]="false" class="checkbox">Remember me</igx-checkbox>
+        </div>
+        <div class="row-layout_1 row">
+          <a href target="_blank" class="link">Forgot password?</a>
+        </div>
+      </div>
+      <button igxButton="raised" igxButtonBackground="var(--igx-secondary-500)" [disabled]="false" class="button_1">
+        <span>log in</span>
+      </button>
+    </div>
+    <div class="column-layout_1 column">
+      <button igxButton="outlined" igxButtonColor="var(--igx-grays-900)" [disabled]="false" class="button">
+        <span>Don't have a registration? Sign up now!</span>
+      </button>
+    </div>
+  </div>
+  <div class="column-layout_2 column"></div>
+</div>

@@ -1,0 +1,122 @@
+<div class="row-layout_2 row">
+  <div class="column-layout column">
+    <div class="column-layout_1 column">
+      <div class="column-layout_2 column">
+        <h5 class="title"></h5>
+        <h5 class="title_1"></h5>
+      </div>
+    </div>
+    <div class="column-layout_8 column">
+      <div class="row-layout_3 row">
+        <h5 class="title_2"></h5>
+        <button igxButton="raised" igxButtonColor="var(--igx-surface-500)" igxButtonBackground="var(--igx-primary-500)" [disabled]="false" class="button">
+          <span>view all ARTICLES</span>
+        </button>
+      </div>
+      <div class="layout row-layout_4 row">
+        <igx-card type="outlined" *ngFor="let item of articlesimagesbyUnsplashcomLatest" class="card">
+          <igx-card-media height="120px">
+            <img [src]="item.image_url" />
+          </igx-card-media>
+          <igx-card-header>
+            <h3 igxCardHeaderTitle>{{ item.title }}</h3>
+            <h5 igxCardHeaderSubtitle>{{ item.subtitle }}</h5>
+          </igx-card-header>
+          <igx-card-actions [reverse]="true" class="actions">
+            <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+              <igx-icon>bookmark_border</igx-icon>
+            </button>
+            <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+              <igx-icon>share</igx-icon>
+            </button>
+            <button igxButton="outlined" igxButtonColor="var(--igx-grays-900)" [disabled]="false" class="button">
+              <span>view</span>
+            </button>
+          </igx-card-actions>
+        </igx-card>
+        <div class="column-layout_7 column">
+          <button igxButton="outlined" igxButtonColor="var(--igx-grays-900)" [disabled]="false" class="button">
+            <span>VIEW ALL</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="column-layout_8 column">
+      <div class="row-layout_3 row">
+        <h5 class="title_2"></h5>
+        <button igxButton="raised" igxButtonColor="var(--igx-surface-500)" igxButtonBackground="var(--igx-primary-500)" [disabled]="false" class="button">
+          <span>view all destinations</span>
+        </button>
+      </div>
+      <div class="layout row-layout_4 row">
+        <igx-card type="outlined" *ngFor="let item of destinationsPhotos" class="card">
+          <igx-card-media height="120px">
+            <img [src]="item.image_url" />
+          </igx-card-media>
+          <igx-card-header>
+            <h3 igxCardHeaderTitle>{{ item.title }}</h3>
+            <h5 igxCardHeaderSubtitle> </h5>
+          </igx-card-header>
+          <igx-card-actions [reverse]="true" class="actions">
+            <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+              <igx-icon>bookmark_border</igx-icon>
+            </button>
+            <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+              <igx-icon>share</igx-icon>
+            </button>
+            <button igxButton="outlined" igxButtonColor="var(--igx-grays-900)" [disabled]="false" class="button">
+              <span>view</span>
+            </button>
+          </igx-card-actions>
+        </igx-card>
+        <div class="column-layout_7 column">
+          <button igxButton="outlined" igxButtonColor="var(--igx-grays-900)" [disabled]="false" class="button">
+            <span>discover more</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="column-layout_9 column">
+      <div class="row-layout_3 row">
+        <h5 class="title_2"></h5>
+        <button igxButton="raised" igxButtonColor="var(--igx-surface-500)" igxButtonBackground="var(--igx-primary-500)" [disabled]="false" class="button">
+          <span>view all lists</span>
+        </button>
+      </div>
+      <div class="layout row-layout_4 row">
+        <igx-grid [data]="northwindProducts" [autoGenerate]="false" width="100%" height="200px" class="grid">
+          <igx-column field="productID" header="productID" title="productID" dataType="number" class="igx-column"></igx-column>
+          <igx-column field="supplierID" header="supplierID" title="supplierID" dataType="number" class="igx-column"></igx-column>
+          <igx-column field="categoryID" header="categoryID" title="categoryID" dataType="number" class="igx-column"></igx-column>
+          <igx-column field="quantityPerUnit" header="quantityPerUnit" title="quantityPerUnit" dataType="string" class="igx-column"></igx-column>
+          <igx-column field="unitPrice" header="unitPrice" title="unitPrice" dataType="number" class="igx-column"></igx-column>
+          <igx-column field="unitsInStock" header="unitsInStock" title="unitsInStock" dataType="number" class="igx-column"></igx-column>
+          <igx-column field="unitsOnOrder" header="unitsOnOrder" title="unitsOnOrder" dataType="number" class="igx-column"></igx-column>
+          <igx-column field="reorderLevel" header="reorderLevel" title="reorderLevel" dataType="number" class="igx-column"></igx-column>
+          <igx-column field="discontinued" header="discontinued" title="discontinued" dataType="boolean" class="igx-column"></igx-column>
+          <igx-column field="name" header="name" title="name" dataType="string" class="igx-column"></igx-column>
+        </igx-grid>
+      </div>
+    </div>
+  </div>
+  <div class="column-layout_3 column">
+    <div class="column-layout_6 column">
+      <div class="row-layout row">
+        <h5 class="title_2"></h5>
+        <button igxButton="raised" igxButtonColor="var(--igx-surface-500)" igxButtonBackground="var(--igx-primary-500)" [disabled]="false" class="button">
+          <span>go to album</span>
+        </button>
+      </div>
+      <div class="layout column">
+        <div class="row-layout_1 row">
+          <div class="column-layout_4 column">
+            <img [src]="item.image_url" *ngFor="let item of imagesTable1" class="image" />
+          </div>
+          <div class="column-layout_5 column">
+            <img [src]="item1.image_url" *ngFor="let item1 of imagesTable2" class="image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

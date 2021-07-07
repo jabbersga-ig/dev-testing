@@ -1,0 +1,138 @@
+<div class="layout row-layout_2 row">
+  <div class="row-layout row">
+    <div class="column-layout column">
+      <h5 class="title"></h5>
+      <div class="layout layout_1 row">
+        <div class="row-layout_1 row">
+          <igx-card type="outlined" *ngFor="let item of articlesimagesbyUnsplashcomAllArticles" class="card">
+            <igx-card-media height="240px">
+              <img [src]="item.image_url" />
+            </igx-card-media>
+            <igx-card-header>
+              <h3 igxCardHeaderTitle>{{ item.title }}</h3>
+              <h5 igxCardHeaderSubtitle>{{ item.subtitle }}</h5>
+            </igx-card-header>
+            <igx-card-actions class="actions">
+              <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+                <igx-icon>bookmark_border</igx-icon>
+              </button>
+              <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+                <igx-icon>share</igx-icon>
+              </button>
+              <button igxButton="outlined" igxButtonColor="var(--igx-grays-900)" [disabled]="false" class="button">
+                <span>Read</span>
+              </button>
+            </igx-card-actions>
+          </igx-card>
+          <igx-card type="outlined" *ngFor="let item of articlesimagesbyUnsplashcomTable5" class="card">
+            <igx-card-media height="240px">
+              <img [src]="item.image_url" />
+            </igx-card-media>
+            <igx-card-header>
+              <h3 igxCardHeaderTitle>{{ item.title }}</h3>
+              <h5 igxCardHeaderSubtitle>{{ item.subtitle }}</h5>
+            </igx-card-header>
+            <igx-card-actions class="actions">
+              <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+                <igx-icon>bookmark_border</igx-icon>
+              </button>
+              <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+                <igx-icon>share</igx-icon>
+              </button>
+              <button igxButton="outlined" igxButtonColor="var(--igx-grays-900)" [disabled]="false" class="button">
+                <span>Read</span>
+              </button>
+            </igx-card-actions>
+          </igx-card>
+          <igx-card type="outlined" *ngFor="let item of articlesimagesbyUnsplashcomLatest" class="card">
+            <igx-card-media height="240px">
+              <img [src]="item.image_url" />
+            </igx-card-media>
+            <igx-card-header>
+              <h3 igxCardHeaderTitle>{{ item.title }}</h3>
+              <h5 igxCardHeaderSubtitle>{{ item.subtitle }}</h5>
+            </igx-card-header>
+            <igx-card-actions class="actions">
+              <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+                <igx-icon>bookmark_border</igx-icon>
+              </button>
+              <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+                <igx-icon>share</igx-icon>
+              </button>
+              <button igxButton="outlined" igxButtonColor="var(--igx-grays-900)" [disabled]="false" class="button">
+                <span>Read</span>
+              </button>
+            </igx-card-actions>
+          </igx-card>
+          <igx-card type="outlined" *ngFor="let item of articlesimagesbyUnsplashcomTable2" class="card">
+            <igx-card-media height="240px">
+              <img [src]="item.image_url" />
+            </igx-card-media>
+            <igx-card-header>
+              <h3 igxCardHeaderTitle>{{ item.title }}</h3>
+              <h5 igxCardHeaderSubtitle>{{ item.subtitle }}</h5>
+            </igx-card-header>
+            <igx-card-actions class="actions">
+              <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+                <igx-icon>bookmark_border</igx-icon>
+              </button>
+              <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+                <igx-icon>share</igx-icon>
+              </button>
+              <button igxButton="outlined" igxButtonColor="var(--igx-grays-900)" [disabled]="false" class="button">
+                <span>Read</span>
+              </button>
+            </igx-card-actions>
+          </igx-card>
+          <igx-card type="outlined" *ngFor="let item of articlesimagesbyUnsplashcomDestinations" class="card">
+            <igx-card-media height="240px">
+              <img [src]="item.image_url" />
+            </igx-card-media>
+            <igx-card-header>
+              <h3 igxCardHeaderTitle>{{ item.title }}</h3>
+              <h5 igxCardHeaderSubtitle>{{ item.subtitle }}</h5>
+            </igx-card-header>
+            <igx-card-actions class="actions">
+              <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+                <igx-icon>bookmark_border</igx-icon>
+              </button>
+              <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+                <igx-icon>share</igx-icon>
+              </button>
+              <button igxButton="outlined" igxButtonColor="var(--igx-grays-900)" [disabled]="false" class="button">
+                <span>Read</span>
+              </button>
+            </igx-card-actions>
+          </igx-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column-layout_1 column">
+    <div class="column-layout_2 column">
+      <h5 class="title"></h5>
+      <div class="layout layout_1 column">
+        <igx-card type="outlined" *ngFor="let item of articlesimagesbyUnsplashcomLatest" class="card_1">
+          <igx-card-media height="160px">
+            <img [src]="item.image_url" />
+          </igx-card-media>
+          <igx-card-header>
+            <h3 igxCardHeaderTitle>{{ item.title }}</h3>
+            <h5 igxCardHeaderSubtitle>{{ item.subtitle }}</h5>
+          </igx-card-header>
+          <igx-card-actions class="actions">
+            <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+              <igx-icon>bookmark_border</igx-icon>
+            </button>
+            <button igxButton="icon" type="icon" [disabled]="false" class="icon-button">
+              <igx-icon>share</igx-icon>
+            </button>
+            <button igxButton="outlined" igxButtonColor="var(--igx-grays-900)" [disabled]="false" class="button">
+              <span>Read</span>
+            </button>
+          </igx-card-actions>
+        </igx-card>
+      </div>
+    </div>
+  </div>
+</div>
